@@ -10,7 +10,7 @@
         android:id="@+id/im_result"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +60,7 @@
         android:id="@+id/bt_retry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="@string/try_again"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent" />
