@@ -13,11 +13,12 @@ class ChooseLevelFragment : Fragment() {
     private var _binding: FragmentChooseLevelBinding? = null
     private val binding: FragmentChooseLevelBinding
         get() = _binding ?: throw RuntimeException("FragmentChooseLevelBinding == null")
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentChooseLevelBinding.inflate(inflater,container, false)
+        _binding = FragmentChooseLevelBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -41,14 +42,14 @@ class ChooseLevelFragment : Fragment() {
 
     }
 
-    private fun launchGameFragment(level: Level){
+    private fun launchGameFragment(level: Level) {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.main_container, GameFragment.newInstance(level))
             .addToBackStack(GameFragment.NAME)
             .commit()
     }
 
-    companion object{
+    companion object {
         fun newInstance(): ChooseLevelFragment {
             return ChooseLevelFragment()
         }
